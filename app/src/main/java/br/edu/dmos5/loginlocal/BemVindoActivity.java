@@ -18,6 +18,8 @@ public class BemVindoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onCreate()");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bem_vindo);
 
@@ -34,6 +36,42 @@ public class BemVindoActivity extends AppCompatActivity {
 
         //Vamos anaisar se o usuário pode logar ou não
         validarUsuario();
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onStart()");
+        super.onStart();
+    }
+
+    @Override
+    protected void onRestart() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onRestart()");
+        super.onRestart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onResume()");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onPause()");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onStop()");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onDestroy()");
+        super.onDestroy();
     }
 
     private void validarUsuario(){

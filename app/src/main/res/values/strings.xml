@@ -6,6 +6,8 @@
     <string name="senha">Senha</string>
     <string name="hint_senha">Digite a senha</string>
     <string name="logar">Logar</string>
+    <string name="tag">LOGIN_LOCAL</string>
+
 
     <string name="key_usuario">USUARIO</string>
     <string name="key_senha">SENHA</string>

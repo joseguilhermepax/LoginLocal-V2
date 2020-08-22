@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
+    //Objetos utilizados para armazenar e recuperar os dados
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+
     private EditText usuarioEditText;
     private EditText senhaEditText;
     private Button logarButton;
@@ -26,8 +30,15 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        Log.v("TAG", "Log de verbose");
+//        Log.d("TAG", "Log de debug");
+//        Log.i("TAG", "Log de info");
+//        Log.w("TAG", "Log de alerta");
+//        Log.e("TAG", "Log de erro");
 
         usuarioEditText     = findViewById(R.id.edittext_usuario);
         senhaEditText       = findViewById(R.id.edittext_senha);
@@ -36,6 +47,44 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         novoUsuarioTextView = findViewById(R.id.textview_novo);
 
         logarButton.setOnClickListener(this);
+        novoUsuarioTextView.setOnClickListener(this);
+
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onStart()");
+        super.onStart();
+    }
+
+    @Override
+    protected void onRestart() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onRestart()");
+        super.onRestart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onResume()");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onPause()");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onStop()");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(getString(R.string.tag), "Classe: " + getClass().getSimpleName() +  "| Método : onDestroy()");
+        super.onDestroy();
     }
 
     @Override
@@ -70,5 +119,4 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         startActivity(in);
     }
-
 }
