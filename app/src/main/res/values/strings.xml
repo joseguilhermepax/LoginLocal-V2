@@ -8,9 +8,10 @@
     <string name="logar">Logar</string>
     <string name="tag">LOGIN_LOCAL</string>
 
-
     <string name="key_usuario">USUARIO</string>
     <string name="key_senha">SENHA</string>
+    <string name="key_lembrar">LEMBRAR</string>
+    <string name="key_usuarios_db">USERS</string>
 
     <string name="user_default">jose.guilherme@gmail.com</string>
     <string name="passwd_default">teste</string>
